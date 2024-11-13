@@ -1,36 +1,39 @@
 ---
-title: Welcome to Starlight
+title: Data Lake
 description: Get started building your docs site with Starlight.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Aquí encontrarás toda la información necesaria para trabajar con el Data Lake de Reservamos SaaS.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/banner-image.png
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Comienza Aquí
+      link: /get-started/overview
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: ¿Quiénes Somos? Descubrel
+      link: https://reservamossaas.com/es/
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
-## Next steps
+## Siguientes Pasos
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Descubre como funciona" icon="open-book">
+    Somos un libro abierto. Descubre la arquitectura y la tecnología detrás de
+    nuestro Data Lake.
+  </Card>
+  <Card title="Recolecta datos" icon="seti:todo">
+    ¿Convencido? Te enseñamos a integrar nuestro SDK en tus productos.
+  </Card>
+  <Card title="Aprende a consumir nuestros servicios" icon="starlight">
+    Aporta valor a tus usuarios con servicios de personalización basados en
+    datos. Funciona como magia.
+  </Card>
+  <Card title="Solicita nuestra ayuda" icon="rocket">
+    Nuestro equipo de expertos está aquí para ayudarte a sacar el máximo
+    potencial de nuestro Data Lake.
+  </Card>
 </CardGrid>

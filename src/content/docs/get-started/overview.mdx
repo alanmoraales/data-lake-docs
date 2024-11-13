@@ -1,0 +1,32 @@
+---
+title: Primeros pasos
+description: Tus primeros pasos con el Data Lake de Reservamos SaaS.
+---
+
+import { LinkCard } from "@astrojs/starlight/components";
+
+El Data Lake de Reservamos SaaS permite a nuestros clientes recolectar datos de sus usuarios para posteriormente consumir servicios potenciados por IA que aportan valor a sus productos.
+
+### Los datos son la base
+
+Para que nuestros servicios puedan aportar valor, es necesario recolectar datos. Esto se logra a través de nuestro SDK, que puede ser integrado en cualquier producto digital.
+
+<LinkCard
+  title="Comienza a recolectar datos"
+  href="/data-collection/getting-started"
+  description="Cómo integrar nuestro SDK en tus productos."
+/>
+
+Para hacer uso de nuestros servicios será necesario contar con un cuenta de Mixpanel y Fingerprint. Los tokens de estos dos servicios son requeridos para configurar el SDK.
+
+<LinkCard
+  title="¿No sabes como obtener los tokens?"
+  href="/guides/generate-mixpanel-and-fingerprint-tokens"
+  description="Cómo obtener los tokens de Mixpanel y Fingerprint."
+/>
+
+<LinkCard
+  title="¿Por qué necesito estos dos servicios?"
+  href="/architecture/external-services"
+  description="Te explicamos por qué estos dos servicios juegan un papel clave en nuestro Data Lake."
+/>

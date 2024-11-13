@@ -15,9 +15,6 @@ export default defineConfig({
         alt: "Reservamos SaaS Logo",
         replacesTitle: true,
       },
-      social: {
-        github: "https://github.com/withastro/starlight",
-      },
       plugins: [
         starlightSidebarTopics([
           {

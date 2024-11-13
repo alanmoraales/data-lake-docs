@@ -1,28 +1,72 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
+import starlightSidebarTopics from "starlight-sidebar-topics";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'My Docs',
-			social: {
-				github: 'https://github.com/withastro/starlight',
-			},
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
-		}),
-	],
+  integrations: [
+    starlight({
+      title: "Reservamos SaaS - Data Lake Docs",
+      favicon: "/favicon.png",
+      logo: {
+        light: "./src/assets/reservamossaas-logo.png",
+        dark: "./src/assets/reservamossaas-logo-white.png",
+        alt: "Reservamos SaaS Logo",
+        replacesTitle: true,
+      },
+      social: {
+        github: "https://github.com/withastro/starlight",
+      },
+      plugins: [
+        starlightSidebarTopics([
+          {
+            label: "Documentación",
+            link: "/get-started/overview",
+            icon: "open-book",
+            items: [
+              {
+                label: "Introducción",
+                items: ["get-started/overview"],
+              },
+              {
+                label: "Recolección de datos",
+                items: ["data-collection/getting-started"],
+              },
+              {
+                label: "Servicios",
+                items: [
+                  "services/overview",
+                  "services/recommended-trips",
+                  "services/frequent-passengers",
+                ],
+              },
+              {
+                label: "Arquitectura",
+                items: [
+                  "architecture/overview",
+                  "architecture/external-services",
+                ],
+              },
+              {
+                label: "Guías",
+                items: ["guides/generate-mixpanel-and-fingerprint-tokens"],
+              },
+            ],
+          },
+          {
+            label: "Referencia del SDK",
+            link: "/reference/sdk/changelog",
+            icon: "seti:javascript",
+            items: [
+              {
+                label: "Changelog",
+                link: "/reference/sdk/changelog",
+              },
+            ],
+          },
+        ]),
+      ],
+    }),
+  ],
 });
